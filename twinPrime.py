@@ -9,12 +9,15 @@ def twinPrime(num):
                 print((i,i+2))
 
 def isPrime(test):
-    for i in range(2, test):
-        if test % i == 0:
-            False
-            break
+    if test > 1:
+        for i in range(2, test):
+            if test % i == 0:
+                False
+                break
+        else:
+            return True
     else:
-        return True
+        return False    
 
 if __name__ == '__main__':
     inputString = input()
